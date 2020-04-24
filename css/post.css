@@ -86,6 +86,13 @@
 	display: none;
 }
 
+.pst-new .pst-list-content {
+	cursor: auto;
+}
+.pst-new .pst-list-content:hover {
+	color: var(--pst-content-color);
+}
+
 /* -------------------- HEADER -------------- */
 .pst-list-header {
 	display: flex;
@@ -196,6 +203,7 @@
 
 .pst-list-status div:last-child i {
 	float: right;
+	margin: 0 0 0 0.5rem;
 }
 
 .pst-list-status div:hover {

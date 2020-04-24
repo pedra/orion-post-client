@@ -43,11 +43,11 @@
             <h1>LOGIN</h1>
             <p>Preencha todos os dados abaixo para receber acesso à plataforma.</p>
             <form onsubmit="return form_submit()" autocomplete="off">
-                <div class="input-form">
+                <!-- <div class="input-form">
                     <input id="log-name" placeholder="&nbsp;" required="true" pattern="\S(?:\s*\S){3}.*\S">
                     <label for="log-name">Nome</label>
                     <span>O nome tem que ter 5 caracteres ou mais.</span>
-                </div>
+                </div> -->
                 <div class="input-form">
                     <input id="log-email" type="email" required="true" placeholder="&nbsp;"
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="digite um email válido">
@@ -70,29 +70,6 @@
 
     <div class="page up" id="pg-post">
         <div class="container">
-            <!-- <div class="pst-index public">
-                <div class="pst-list" id="pst-list-new">
-                    <div class="pst-list-avatar">
-                        <img src="https://www.thispersondoesnotexist.com/image">
-                    </div>
-                    <div class="pst-list-content">
-                        <div class="pst-list-header">Administrador <span>@admin</span></div>
-                        <div class="pst-list-head" contenteditable="true"
-                            title="Texto principal do artigo com, no máximo, 200 caracteres.">Texto principal do artigo
-                            com, no máximo, 200 caracteres.</div>
-                        <div class="pst-list-media" style="display:none"></div>
-                        <div class="pst-list-content" contenteditable="true"
-                            title="Conteúdo extra, opcional, para complementar a informação principal.">Conteúdo extra,
-                            opcional, para complementar a informação principal.</div>
-
-                        <div class="pst-list-status">
-                            <div title="Adicionar vídeo do Youtube"><i class="material-icons">ondemand_video</i></div>
-                            <div><button onclick="Post.save()">Publicar</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
             <div class="pst-list pst-new" id="pst-new">
                 <div class="pst-list-header">
                     <div class="pst-list-header-avatar">
@@ -105,22 +82,28 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="pst-list-head" contenteditable="true"
                     title="Texto principal do artigo com, no máximo, 200 caracteres.">Texto principal do artigo
                     com, no máximo, 200 caracteres.</div>
+
                 <div class="pst-list-media" id="pst-list-media"></div>
+
                 <div class="pst-list-content" contenteditable="true"
                     title="Conteúdo extra, opcional, para complementar a informação principal.">Conteúdo extra,
                     opcional, para complementar a informação principal.</div>
+
                 <div class="pst-list-status">
-                    <div title="Adicionar vídeo do Youtube"><i class="material-icons">ondemand_video</i></div>
-                    <div><button onclick="Post.save()">Publicar</button>
+                    <div title="Adicionar vídeo do Youtube"><button onclick="Post.addMedia()"><i
+                                class="material-icons">ondemand_video</i>Media</button></div>
+                    <div><button onclick="Post.save()">Publicar<i class="material-icons">send</i></button>
                     </div>
                 </div>
             </div>
             <div class="pst-index" id="pst-list"></div>
             <div class="control bottom-bar">
-                <button id="btn-pst-new" onclick="Post.showEditor()"><img src="/img/i32.png">mais ?</button>
+                <button id="btn-pst-new" title="carregar mais..." onclick="Post.showEditor()"><i
+                        class="material-icons">refresh</i>Continuar</button>
             </div>
         </div>
     </div>
@@ -145,7 +128,7 @@
         </div>
     </div>
 
-
+    <div class="copyright">©Quespost | version 0.3.56 | alpha</div>
 
     <!-- W5 Components [begin]-->
     <div class="w5_toast" id="w5_toast"></div>

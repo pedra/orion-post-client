@@ -254,9 +254,7 @@ button:hover {
 
 button .material-icons {
     font-size: 1.1rem;
-    line-height: 3rem;
     margin: 0 .5rem 0 0;
-    float: left;
 }
 
 
@@ -401,5 +399,17 @@ input:valid+label+span {
 }
 
 #pg-login p {
-    margin: 0 0 4rem 0;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+
+/* COPYHIGHT
+-------------------------------------------- */
+.copyright {
+    position: fixed;
+    bottom: 3px;
+    font-size: .8rem;
+    color: var(--copyright);
+    z-index: 10000;
 }
