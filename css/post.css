@@ -6,7 +6,7 @@
 	right: 0;
 	height: 48px;
 	background: rgba(219, 239, 255, 0.8);
-	background: var(--btn-hover-bg);
+	background: var(--btn-bg);
 	display: flex;
 	z-index: 2000;
 }
@@ -44,6 +44,7 @@
 .top-bar .menu {
 	flex-basis: 43px;
 	color: var(--btn-hover-color);
+	cursor: pointer;
 }
 
 /* ----------------- BOTTOM-BAR ----------- */
@@ -100,7 +101,6 @@
 }
 
 .pst-list-header span {
-	font-weight: 100;
 	color: var(--pst-link);
 }
 
@@ -129,12 +129,12 @@
 
 /* ---- HEADER INFO ---- */
 .pst-list-header-info {
-	font-size: 0.9rem;
 	flex-basis: 100%;
 	cursor: pointer;
 }
 
 .pst-list-header-info h2 {
+	font-size: 1.1rem;
 	margin: 0;
 	padding: 0;
 }

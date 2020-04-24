@@ -18,10 +18,10 @@ const Post = {
 
 	init: () => {
 		window.onresize = Post.resize
-		_(Post.index.username).innerHTML = 'Administrador'
-		_(Post.index.userlink).innerHTML = '@admin'
 	},
 	show: () => {
+		_(Post.index.username).innerHTML = GATE.name
+		_(Post.index.userlink).innerHTML = '@' + GATE.link
 		SHOW.page('post')
 		GATE.gate(Post.controller, 'Index', {}, (e, d) => {
 			if (e || !d.data.data) return (_(Post.index.list).innerHTML = LANG.get('POST', 1))
@@ -54,7 +54,7 @@ const Post = {
 					<div class="pst-list-header-info" onclick="Person.profile(${a.person})">
 						<h2>${a.name}</h2> 
 						<div>
-							<time datetime="${a.published}">${Util.data(new Date(a.published))}</time> by 
+							<time datetime="${a.published}">${Util.data(new Date(a.published))}</time>
 							<span>@${a.link}</span>
 						</div>
 					</div>

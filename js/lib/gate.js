@@ -38,6 +38,8 @@ const GATE = {
 	// Persistence settings
 	configUrl: '/config',
 	id: 0,
+	name: '',
+	link: '',
 	rsa: '',
 	token: '',
 	ukey: '',
@@ -226,6 +228,8 @@ const GATE = {
 			console.log('GATE2:', data)
 
 			if (data.id) GATE.id = data.id
+			if (data.name) GATE.name = data.name
+			if (data.link) GATE.link = data.link
 			if (data.ukey) GATE.ukey = data.ukey
 			if (data.token) GATE.token = data.token
 
