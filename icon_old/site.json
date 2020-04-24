@@ -1,0 +1,23 @@
+{
+    "name": "Quespost",
+    "short_name": "Quespost",
+    "lang": "pt-BR",
+    "start_url": "/",
+    "description": "Postagem de notícias",
+    "icons": [{
+            "src": "/icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0059b2",
+    "background_color": "#0059b2",
+    "display": "standalone",
+    "orientation": "portrait",
+    "gcm_sender_id": "103953800507"
+}

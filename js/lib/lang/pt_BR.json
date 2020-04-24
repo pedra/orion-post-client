@@ -1,0 +1,21 @@
+[{
+		"node": "gate",
+		"text": [
+			"Desconectado",
+			"Não consegui pegar a chave pública no servidor :("
+		]
+	}, {
+		"node": "auth",
+		"text": [
+			"Não consegui autenticar com os dados fornecidos!",
+			"A chave pública não foi obtida!<br>Verifique a conexão com a internet.",
+			"A Chave Local não foi gerada!",
+			"Verifique o login e a senha!",
+			"Conectado com SUCESSO!"
+		]
+	},
+	{
+		"node": "post",
+		"text": ["Nenhuma publicação encontrada."]
+	}
+]

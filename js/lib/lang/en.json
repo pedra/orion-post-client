@@ -1,0 +1,14 @@
+{
+	"node": "gate",
+	"text": [
+		"The public key was not obtained! <br> Check the internet connection.",
+		"You need to enter your login",
+		"Type the password",
+		"The Local Key was not generated!",
+		"Check your login and password!",
+		"Connected with SUCCESS!",
+		"Unplugged",
+		"I was unable to get the public key from the server :(",
+		"I was unable to connect to the server!"
+	]
+}

@@ -1,0 +1,60 @@
+[
+    // Exemplo de listagem para o índice: 
+
+    {
+        id: 1234,
+        name: "Bill Rocha",
+        head: "Texto da chamada com até 120 caracteres (+ ...)",
+        date: 1587314626327
+    },
+    {
+        id: 1235,
+        name: "Other User",
+        head: "Texto da chamada com até 120 caracteres (+ ...)",
+        date: 1587314626328
+    },
+
+    // Exemplo de publicação completa:
+
+    {
+        id: 1234,
+        user: {
+            id: 123,
+            name: "Bill Rocha",
+            avatar: "/u/123.jpg"
+        },
+        status: {
+            views: 20,
+            replay: 10,
+            date: 1587314626327,
+            like: 19,
+            unlike: 1
+        },
+        article: {
+            head: "Texto da chamada com até 200 caracteres",
+            content: "[optional] Texto até 1000 caracteres com formatação em HTML",
+            media: [{
+                    title: "Title for this video... (optional)",
+                    type: "youtube",
+                    url: "https://www.youtube.com/watch?v=oNRZs9Xuu9U",
+                    or_url: "https://youtu.be/oNRZs9Xuu9U",
+                },
+                {
+                    title: "Title for this image... (optional)",
+                    type: "image",
+                    url: "/p/1234/2.jpg"
+                },
+                {
+                    title: "Title for another image... (optional)",
+                    type: "image",
+                    url: "/p/1234/3.jpg"
+                },
+                {
+                    title: "Title for this link... (optional)",
+                    type: "link",
+                    url: "https://any/external/link"
+                }
+            ]
+        }
+    }
+]

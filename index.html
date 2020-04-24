@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quespost - Projeto Órion</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+    <link rel="manifest" href="/icon/site.json">
+    <link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#0059b2">
+    <link rel="shortcut icon" href="/icon/favicon.ico">
+
+    <meta name="apple-mobile-web-app-title" content="Quespost">
+    <meta name="application-name" content="Quespost">
+    <meta name="msapplication-TileColor" content="#b8e7ff">
+    <meta name="msapplication-config" content="/icon/browserconfig.xml">
+    <meta name="theme-color" content="#b8e7ff">
+
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+</head>
+
+<body>
+
+    <div class="top-bar" id="top-bar">
+        <div class="container">
+            <div class="title">
+                <img src="/img/logo.png">
+            </div>
+            <div class="menu">
+                <i class="material-icons">menu</i>
+            </div>
+        </div>
+    </div>
+
+    <div class="page up" id="pg-login">
+        <div class="container">
+            <h1>LOGIN</h1>
+            <p>Preencha todos os dados abaixo para receber acesso à plataforma.</p>
+            <form onsubmit="return form_submit()" autocomplete="off">
+                <div class="input-form">
+                    <input id="log-name" placeholder="&nbsp;" required="true" pattern="\S(?:\s*\S){3}.*\S">
+                    <label for="log-name">Nome</label>
+                    <span>O nome tem que ter 5 caracteres ou mais.</span>
+                </div>
+                <div class="input-form">
+                    <input id="log-email" type="email" required="true" placeholder="&nbsp;"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="digite um email válido">
+                    <label for="log-email">Email</label>
+                </div>
+                <div class="input-form">
+                    <input id="log-passw" type="password" required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Letra maiúscula, minúscula, número e 8 ou mais caracteres." placeholder="&nbsp;">
+                    <label for="log-passw">Senha</label>
+                    <span>A senha tem que ter, pelo menos, uma letra maiúscula, minúscula, número e oito (8) ou mais
+                        caracteres.</span>
+                </div>
+            </form>
+            <div class="control">
+                <button onclick="AUTH.login()"><i class="material-icons">lock</i>Entrar</button>
+                <button onclick="SHOW.page('editor')"><i class="material-icons">close</i>Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page up" id="pg-post">
+        <div class="container">
+            <!-- <div class="pst-index public">
+                <div class="pst-list" id="pst-list-new">
+                    <div class="pst-list-avatar">
+                        <img src="https://www.thispersondoesnotexist.com/image">
+                    </div>
+                    <div class="pst-list-content">
+                        <div class="pst-list-header">Administrador <span>@admin</span></div>
+                        <div class="pst-list-head" contenteditable="true"
+                            title="Texto principal do artigo com, no máximo, 200 caracteres.">Texto principal do artigo
+                            com, no máximo, 200 caracteres.</div>
+                        <div class="pst-list-media" style="display:none"></div>
+                        <div class="pst-list-content" contenteditable="true"
+                            title="Conteúdo extra, opcional, para complementar a informação principal.">Conteúdo extra,
+                            opcional, para complementar a informação principal.</div>
+
+                        <div class="pst-list-status">
+                            <div title="Adicionar vídeo do Youtube"><i class="material-icons">ondemand_video</i></div>
+                            <div><button onclick="Post.save()">Publicar</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="pst-list pst-new" id="pst-new">
+                <div class="pst-list-header">
+                    <div class="pst-list-header-avatar">
+                        <img src="https://www.thispersondoesnotexist.com/image">
+                    </div>
+                    <div class="pst-list-header-info">
+                        <h2 id="pst-new-name"></h2>
+                        <div class="pst-list-header-info2">
+                            <span id="pst-new-link"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pst-list-head" contenteditable="true"
+                    title="Texto principal do artigo com, no máximo, 200 caracteres.">Texto principal do artigo
+                    com, no máximo, 200 caracteres.</div>
+                <div class="pst-list-media" id="pst-list-media"></div>
+                <div class="pst-list-content" contenteditable="true"
+                    title="Conteúdo extra, opcional, para complementar a informação principal.">Conteúdo extra,
+                    opcional, para complementar a informação principal.</div>
+                <div class="pst-list-status">
+                    <div title="Adicionar vídeo do Youtube"><i class="material-icons">ondemand_video</i></div>
+                    <div><button onclick="Post.save()">Publicar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pst-index" id="pst-list"></div>
+            <div class="control bottom-bar">
+                <button id="btn-pst-new" onclick="Post.showEditor()"><img src="/img/i32.png">mais ?</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page up" id="pg-editor">
+        <div class="container">
+            <div class="pst-edt-head" id="pst-edt-head" title="Digite a chamada aqui" contenteditable="true"></div>
+            <div class="player" id="pst-edt-player"></div>
+
+            <div class="input-form pst-edt-link-insert on" id="pst-edt-link-insert">
+                <input id="pst-edt-link" placeholder="&nbsp;" required="true" title="Link inválido"
+                    pattern="https:\/\/youtu\.be\/.*|https:\/\/www\.youtube\.com\/watch\?v\=.*">
+                <label for="pst-edt-link">Cole o link do Youtube</label>
+            </div>
+
+            <div class="pst-edt-content" id="pst-edt-content" title="Digite o conteúdo [opcional]"
+                contenteditable="true"></div>
+            <div class="control">
+                <button id="pst-edt-public" onclick="Post.save()">Publicar</button>
+                <a href="" class="btn-flat" id="cancel">Descartar</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- W5 Components [begin]-->
+    <div class="w5_toast" id="w5_toast"></div>
+    <div class="w5_glass" id="w5_glass">
+        <ul>
+            <li>
+                <div></div><span>Aguarde ...</span>
+            </li>
+        </ul>
+    </div>
+    <!-- W5 Components [end]-->
+
+    <script src="/js/lib/function.js"></script>
+    <script src="/js/lib/util.js"></script>
+    <script src="/js/lib/lang.js"></script>
+    <script src="/js/lib/show.js"></script>
+
+    <script src="/js/vendor/aes.js"></script>
+    <script src="/js/vendor/rsa.js"></script>
+    <script src="/js/lib/gate.js"></script>
+
+    <script src="/js/ctrl/home.js"></script>
+    <script src="/js/ctrl/auth.js"></script>
+    <script src="/js/ctrl/post.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

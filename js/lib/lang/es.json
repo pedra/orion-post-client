@@ -1,0 +1,14 @@
+{
+	"node": "gate",
+	"text": [
+		"¡No se obtuvo la clave pública! <br> Compruebe la conexión a Internet.",
+		"Necesita ingresar su nombre de usuario",
+		"Ingresar contraseña",
+		"¡La clave local no se generó!",
+		"¡Verifique su nombre de usuario y contraseña!",
+		"Conectado con el ÉXITO!",
+		"Desconectado",
+		"Não consegui pegar a chave pública no servidor :(",
+		"Não consegui me conectar ao servidor!"
+	]
+}
