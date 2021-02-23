@@ -26,21 +26,11 @@
 </head>
 
 <body>
-
-    <div class="top-bar" id="top-bar">
+    <div class="page login up" id="pg-login">
         <div class="container">
-            <div class="title">
-                <img src="/img/logo.png">
+            <div class="logo">
+                <img src="/img/i192.png">
             </div>
-            <div class="menu">
-                <i class="material-icons">menu</i>
-            </div>
-        </div>
-    </div>
-
-    <div class="page up" id="pg-login">
-        <div class="container">
-            <h1>LOGIN</h1>
             <p>Preencha todos os dados abaixo para receber acesso à plataforma.</p>
             <form onsubmit="return form_submit()" autocomplete="off">
                 <!-- <div class="input-form">
@@ -68,7 +58,19 @@
         </div>
     </div>
 
-    <div class="page up" id="pg-post">
+    <div class="page post up" id="pg-post">
+
+        <div class="top-bar" id="top-bar">
+            <div class="container">
+                <div class="title">
+                    <img src="/img/logo.png">
+                </div>
+                <div class="menu">
+                    <i class="material-icons">menu</i>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="pst-list pst-new" id="pst-new">
                 <div class="pst-list-header">
@@ -108,7 +110,7 @@
         </div>
     </div>
 
-    <div class="page up" id="pg-editor">
+    <div class="page editor up" id="pg-editor">
         <div class="container">
             <div class="pst-edt-head" id="pst-edt-head" title="Digite a chamada aqui" contenteditable="true"></div>
             <div class="player" id="pst-edt-player"></div>

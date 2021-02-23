@@ -44,7 +44,7 @@ const Post = {
 				media =
 					media == ''
 						? ''
-						: `<div class="pst-list-media"><iframe id="pst-edt-ytplayer" width="100%" height="100%" type="text/html" src="https://www.youtube.com/embed/${media}?autoplay=0&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe></div>`
+						: `<div class="pst-list-media"><iframe  onload="this.classList.add('on')" id="pst-edt-ytplayer" width="100%" height="100%" type="text/html" src="https://www.youtube.com/embed/${media}?autoplay=0&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe></div>`
 
 				h += `<div class="pst-list" id="pst-list-${a.id}">
 				<div class="pst-list-header">

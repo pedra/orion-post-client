@@ -21,7 +21,7 @@
 	--inp-form-focus-label-color: #333;
 
 	--inp-form-valid-border-color: #4caf50 !important;
-	--inp-form-valid-color: #9fec81 !important;
+	--inp-form-valid-color: #4caf50 !important;
 	--inp-form-valid-label-color: #00544c;
 
 	--page-bg: rgba(255, 255, 255, 0.8);
@@ -30,5 +30,6 @@
 	--pst-link: #2196f3;
 
 	--pst-content-color: #bdbdbd;
+	--pst-media-bg: rgba(0, 0, 0, 0.4);
 	--copyright: black;
 }
